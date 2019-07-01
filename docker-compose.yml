@@ -1,0 +1,13 @@
+version: '3'
+services:
+    vault:
+        image: vault:latest
+        ports:
+          - "8200:8200"
+        volumes:
+          - ./vault/file:/vault/file:rw
+          - ./vault/config:/vault/config:rw
+          - ./vault/logs:/vault/logs:rw
+        cap_add:
+          - IPC_LOCK
+        command: server
