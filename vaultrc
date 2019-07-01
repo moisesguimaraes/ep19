@@ -1,1 +1,7 @@
 export VAULT_ADDR='http://0.0.0.0:8200'
+export VAULT_UK1=UQjhEjaawo9KGkbGwPTd3XqLPvy/tFnZtCprZ3and/1c
+export VAULT_UK2=cDqvfFMf1MgC0ntXrKmjsbelaaB1sbLfi6cyo+dgXZzK
+export VAULT_UK3=wMzXuy1qksQg1dVc0CVCp8mclpE1pBzFC0Ae0YmX8j4Q
+export VAULT_UK4=G4vKj527KT6uqiMLQn4EaK0bEeLYcWH09kJn23qIMMeb
+export VAULT_UK5=5LPaGrbOXg7RqaW1uHDoSuIDZ0/OsKihGmbH3BGQTUwi
+export VAULT_TOKEN=s.FSUHTpovzLBhu4ENA5evXWdC
