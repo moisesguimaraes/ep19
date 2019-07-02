@@ -1,6 +1,10 @@
+import os
+
 from flask import Flask
 from oslo_config import cfg
 import psycopg2
+
+app_dir = os.path.dirname(os.path.realpath(__file__))
 
 conf = cfg.ConfigOpts()
 
@@ -34,7 +38,8 @@ def connect():
         status = "✅ Successfully connected"
         conn.close()
     except psycopg2.OperationalError:
-        status = "❌ Failed to connect"
+        with open(os.path.join(app_dir, "403.html")) as response:
+            return response.read()
 
     return (
         f"{status} to DB at <em>{conf.db.hostname}</em> with:<br/><br/>"
