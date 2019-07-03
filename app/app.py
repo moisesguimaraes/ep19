@@ -35,16 +35,19 @@ def connect():
             f"user={conf.db.username} password={conf.db.password}"
         )
 
-        status = "✅ Successfully connected"
+        with open(os.path.join(app_dir, "200.html")) as template:
+            response = template.read()
+
         conn.close()
     except psycopg2.OperationalError:
-        with open(os.path.join(app_dir, "403.html")) as response:
-            return response.read()
+        with open(os.path.join(app_dir, "403.html")) as template:
+            response = template.read()
 
-    return (
-        f"{status} to DB at <em>{conf.db.hostname}</em> with:<br/><br/>"
-        f"&nbsp;&nbsp;&nbsp; username: <em>{conf.db.username}</em><br/>"
-        f"&nbsp;&nbsp;&nbsp; password: <em>{conf.db.password}</em><br/>"
+    return response.replace("###STATUS###", (
+            f"hostname: <em>{conf.db.hostname}</em><br/>"
+            f"username: <em>{conf.db.username}</em><br/>"
+            f"password: <em>{conf.db.password}</em><br/>"
+        )
     )
 
 
