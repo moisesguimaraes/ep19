@@ -15,8 +15,8 @@ _app_opts = [
 
 _db_opts = [
     cfg.StrOpt('hostname', default="db"),
-    cfg.StrOpt('username', default="postgres"),
-    cfg.StrOpt('password', default="changeme")
+    cfg.StrOpt('username', required=True),
+    cfg.StrOpt('password', required=True)
 ]
 
 conf.register_cli_opts(_app_opts, "app")
