@@ -52,4 +52,7 @@ def connect():
 
 
 if __name__ == "__main__":
+    print("### oslo.config vault env token:",
+          os.environ.get("OS_VAULT__ROOT_TOKEN_ID", ""))
+
     app.run(host=conf.app.host, port=conf.app.port)
