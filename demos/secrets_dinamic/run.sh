@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source vaultrc
+source ../../vaultrc
 
 set -eux
 

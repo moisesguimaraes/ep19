@@ -39,7 +39,7 @@ with open("token.json", "r") as token_json:
 
 # run webapp
 subprocess.run([
-    "python", "../app/app.py",
+    "python", "../../app/app.py",
     f"--app-port={random.randint(5050, 5099)}",
-    "--config-file=webapp.conf"
+    "--config-file=app.conf"
 ])
