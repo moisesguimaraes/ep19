@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Oswald|Roboto);
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      .container {
+        width: 500px;
+        height: 500px;
+        box-shadow: 5px 5px 10px 2px #888;
+      }
+
+      .top-bar {
+        text-align: center;
+        background: #29CDB5;
+        width: 500px;
+        height: 300px;
+      }
+      .top-bar .fa-check-circle-o {
+        color: white;
+        margin-top: 5px;
+        font-size: 18em;
+      }
+
+      .bottom-bar {
+        text-align: center;
+      }
+      .bottom-bar h1 {
+        color: #444;
+        font-family: 'Oswald', sans-serif;
+        font-weight: bold;
+        margin-bottom: -10px;
+      }
+      .bottom-bar p {
+        color: #555;
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-size: 1.2em;
+      }
+      .bottom-bar button {
+        background: white;
+        border: 3px solid #29CDB5;
+        color: #444;
+        border-radius: 10px;
+        padding: 10px 20px 10px 20px;
+        outline: none;
+        transition: all 0.3s ease-in;
+      }
+      .bottom-bar button:hover {
+        background: #29CDB5;
+        color: white;
+      }
+
+    </style>
+
+    <script>
+      window.console = window.console || function(t) {};
+    </script>
+
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+  </head>
+
+  <body translate="no">
+    <div class="container">
+      <div class="top-bar">
+        <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+      </div>
+      <div class="bottom-bar">
+        <br/><br/><br/><br/>
+        <div style="display: inline-block; text-align: left;">
+            hostname: <em>{{conf.db.hostname}}</em><br/>
+            username: <em>{{conf.db.username}}</em><br/>
+            password: <em>{{conf.db.password}}</em><br/>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

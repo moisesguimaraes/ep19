@@ -64,22 +64,33 @@ Oslo.config will check for defined option values using the following order of pr
 
 To minimize impact on codebases, we used the source drivers API to implement the castellan driver. This driver is responsible for retrieving config values from secret managers supported by Castellan and has the following options:
 
-driver=castellan
+**driver=castellan**
 
 The name of the driver that can load this configuration source.
-config_file
+
+**config_file**
 
 A config file required by Castellan to talk to a secret manager.
-      mapping_file
+
+**mapping_file**
 
 A pseudo config file that maps options to secret_ids instead of values. The driver uses secret_ids in Castellan to fetch option values stored in the secret manager. 
 
-The proof of concept (PoC) for this work aimed to fulfill the following criteria:
+The proof of concept (PoC) for this work aims to fulfill the following criteria:
 
 1. Have a sample application fetching config values through oslo.config;
 2. Strip out secrets from its config file;
 3. Store those secrets in a secret manager;
 4. Have the sample application to fetch secrets from the secret manager without any change to its code.
+
+
+## PoC scenarios
+
+https://github.com/moisesguimaraes/ep19/tree/master/demos/plaintext
+
+https://github.com/moisesguimaraes/ep19/tree/master/demos/secrets_static
+
+https://github.com/moisesguimaraes/ep19/tree/master/demos/Secrets_dinamic
 
 
 ## Conclusions
