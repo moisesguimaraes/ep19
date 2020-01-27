@@ -1,7 +1,7 @@
 version: '3'
 services:
   vault:
-    image: vault:latest
+    image: vault
     ports:
       - "8200:8200"
     volumes:
@@ -14,7 +14,7 @@ services:
     depends_on:
       - db
   db:
-    image: postgres:alpine
+    image: postgres
     restart: always
     ports:
       - "5432:5432"
