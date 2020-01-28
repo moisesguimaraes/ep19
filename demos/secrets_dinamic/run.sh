@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo -e "\nRunning webapp with conf:\n"
+
+tail -n +1 app.conf castellan.conf
+
+echo -e ""
+
 source ../../vaultrc
 
 set -eux

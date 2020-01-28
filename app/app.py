@@ -14,7 +14,7 @@ _app_opts = [
 ]
 
 _db_opts = [
-    cfg.StrOpt("hostname", default="db"),
+    cfg.StrOpt("hostname", default="localhost"),
     cfg.StrOpt("username", required=True),
     cfg.StrOpt("password", required=True),
 ]

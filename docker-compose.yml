@@ -1,5 +1,6 @@
 version: '3'
 services:
+
   vault:
     image: vault
     ports:
@@ -13,6 +14,7 @@ services:
     command: server
     depends_on:
       - db
+
   db:
     image: postgres
     restart: always
@@ -20,6 +22,7 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_PASSWORD: changeme
+
   web:
     build: ./app/
     ports:
