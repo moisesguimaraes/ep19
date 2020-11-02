@@ -74,7 +74,7 @@ A config file required by Castellan to talk to a secret manager.
 
 **mapping_file**
 
-A pseudo config file that maps options to secret_ids instead of values. The driver uses secret_ids in Castellan to fetch option values stored in the secret manager. 
+A pseudo config file that maps options to secret_ids instead of values. The driver uses secret_ids in Castellan to fetch option values stored in the secret manager.
 
 The proof of concept (PoC) for this work aims to fulfill the following criteria:
 
@@ -108,8 +108,8 @@ With the proper use of policies, we think that orchestrators could trigger secre
 
 The next step in our roadmap is to integrate this work into TripleO, a program aimed at installing, upgrading and operating OpenStack clouds using OpenStack's own cloud facilities as the foundations to automate fleet management at datacenter scale.
 
-Developers interested in using another solution as an extra source of configuration data can implement their own drivers following this [spec]_.
+Developers interested in using another solution as an extra source of configuration data can implement their own drivers following this [spec].
 
 [oslo.config]: https://docs.openstack.org/oslo.config/latest/
 [Castellan]: https://docs.openstack.org/castellan/latest/
-[spec]: https://specs.openstack.org/openstack/oslo-specs/specs/queens/ oslo-config-drivers
+[spec]: https://specs.openstack.org/openstack/oslo-specs/specs/queens/oslo-config-drivers
